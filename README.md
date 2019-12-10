@@ -1,6 +1,28 @@
 # GithubSearch
+This is an angular application that enables one to search a github user and their credentials like; Avatar, repositories, public gists, email and view the profile on github.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19.
+## Author.
+**Mburiah Betty**
+ - *Project* - Live link at: https://mburiah.github.io/Github-Search/
+
+## Requirements
+Web browser with an internet connection.
+
+## BDD
+*  BDD stands for Behaviour-Driven Development.
+
+ | Input | Description| Output |
+ |:---    | ---: | ---: |
+ | text | user types text on the search form | github profile is automatically fetched |   
+ | view profile on github | Click on the button | redirects to the person's github profile |
+ | view repo | Click on the button below repo |  redirects to the particular repo on github |
+
+## Technologies used.
+* Angular 8
+* Typescript
+* Github Api OAuth app (tokens)
+* HTML, CSS and Javascript.
+* Bootstrap
 
 ## Development server
 
@@ -25,3 +47,5 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19
