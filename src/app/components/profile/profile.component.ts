@@ -29,6 +29,9 @@ export class ProfileComponent implements OnInit {
          });
   }
   ngOnInit() {
+    this.profileService.updateProfile('mburiah');
+    this.profileService.getProfileInfo().subscribe(profile => this.profile = profile);
+    this.profileService.getProfilerepos().subscribe(repos =>  this.repos = repos);
 
   }
 }
