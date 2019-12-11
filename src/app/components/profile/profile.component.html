@@ -15,16 +15,17 @@
     </form>
     <div *ngIf= 'profile'>
       <div class="panel panel-default">
-        <div class="panel-heading">
-          {{profile.name}}<small>{{profile.login}} </small>
-          <span *ngIf="profile.company"> , Works at {{profile.company}} </span>
-          {{profile.location}}
-        </div>
         <div class="panel-body">
           <div class="row">
-            <div class="col-sm-3">
+            <div>
               <img src="{{profile.avatar_url}}" class="img-circle img-responsive" alt="Profile Image">
-            </div>
+              <p>
+                  <span class=" btn btn-warning  p-0"> {{profile.followers}} Followers</span>
+                  <span class="btn btn-danger p-0"> {{profile.following}} Following</span>
+                  <span class=" btn btn-info p-0"> {{profile.public_gists}} Public Gists</span>
+                  <span class="btn btn-success p-0"> {{profile.public_repos}} Public Repos</span>
+                </p>
+              </div>
             <div class="col-sm-5">
               <ul class="list-group">
                 <li class= "list-group-item" *ngIf="profile.bio">{{profile.bio}}</li>
@@ -32,30 +33,29 @@
                 <li class= "list-group-item"  *ngIf="profile.bio">{{profile.bio))</li>
               </ul>
             </div>
-            <div class="col-sm-4">
-              <p>
-                <span class="label label-default"> {{profile.followers}} Followers</span>
-                <span class="label label-success"> {{profile.following}} Following</span>
-                <span class="label label-primary"> {{profile.public_gists}} Public Gists</span>
-                <span class="label label-info"> {{profile.public_repos}} Public Repos</span>
-              </p>
+            <!-- <div class="col-sm-4"> -->
+
               <p><a href="{{profile.html_url}}" target="blank" class="btn btn-success btn-sm">View profile on github</a></p>
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h3 class="panel-title"><u>Repos</u></h3>
+              <div class="">
+                <div>
+                  <h3 ><u>Repos</u></h3>
                 </div>
-                <div class="panel-body"  *ngFor="let repo of repos">
-                  <p class="clearfix">
-                    {{repo.name}}<a href="{{repo.html_url}}" target="_blank" class="btn btn-sm btn-primary">View repo on github</a>
+                <div class="" *ngFor="let repo of repos ">
+                  <div class="card text-white bg-dark m-3" >
+
+                  <p class="card-header ppp" style="color:white" >
+                    {{repo.name}}<br><a href="{{repo.html_url}}" target="_blank" class="btn btn-sm btn-outline-info">View repo on github</a>
                   </p>
-                  <p> {{repo.description}}</p>
+                  <p class="card-body pp p-3"> {{repo.description}}</p>
+                  <p class='pipe'>Created on :{{repo.created_at|date}}</p>
+                </div>
                 </div>
               </div>
+              <!-- </div> -->
             </div>
           </div>
         </div>
       </div>
-    </div>
   </body>
 </html>
 
