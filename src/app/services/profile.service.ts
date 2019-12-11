@@ -8,8 +8,8 @@ import { HttpClient } from '@angular/common/http';
 export class ProfileService {
 
   private username: string;
-  private clientid = '947b5917e35509f9d697';
-  private clientsecret =  '043bfb031bd753a4cc7b39840c62f97f4fa63c5e';
+  private clientid = '469b9f611b8dc6b7204d';
+  private clientsecret =  '19366be1c273bf4a336355df2c125d8572e36f9c';
 
   constructor(private http: HttpClient) {
     console.log('service is now ready!');
