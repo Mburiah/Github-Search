@@ -19,6 +19,7 @@
           <div class="row">
             <div>
               <img src="{{profile.avatar_url}}" class="img-circle img-responsive" alt="Profile Image">
+              <p class="login">{{profile.login}}</p>
               <p>
                   <span class=" btn btn-warning  p-0"> {{profile.followers}} Followers</span>
                   <span class="btn btn-danger p-0"> {{profile.following}} Following</span>
@@ -27,10 +28,11 @@
                 </p>
               </div>
             <div class="col-sm-5">
+              
               <ul class="list-group">
-                <li class= "list-group-item" *ngIf="profile.bio">{{profile.bio}}</li>
+                <li class= "list-group-item" *ngIf="profile.bio">{{profile.company}}</li>
                 <li class= "list-group-item" *ngIf="profile.email"><a href="emailto: {{profile.email}}" target="_blank">{{profile.email}}</a></li>
-                <li class= "list-group-item"  *ngIf="profile.bio">{{profile.bio))</li>
+                <li class= "list-group-item"  *ngIf="profile.bio">{{profile.bio}}</li>
               </ul>
             </div>
             <!-- <div class="col-sm-4"> -->
