@@ -33,11 +33,11 @@
             <p><a href="{{profile.html_url}}" target="blank" class="btn btn-success btn-sm">View profile on github</a></p>
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h3 class="panel-title">Repos</h3>
+                <h3 class="panel-title"><u>Repos</u></h3>
               </div>
               <div class="panel-body"  *ngFor="let repo of repos">
                 <p class="clearfix">
-                  {{repo.name}}<a href="{{repo.html_url}}" target="_blank" class="btn btn-sm btn-primary">View this profile on github</a>
+                  {{repo.name}}<a href="{{repo.html_url}}" target="_blank" class="btn btn-sm btn-primary">View repo on github</a>
                 </p>
                   <p> {{repo.description}}</p>
 
